@@ -14,7 +14,7 @@ scrape_configs:
     scheme: http
     static_configs:
       - targets:
-        - calorie-bot.railway.internal:8080
+        - calorie-nutri.railway.internal:8080
         labels:
           app: calorie-bot
   # - job_name: 'example_api'

@@ -6,6 +6,17 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
 
+  - job_name: calorie-bot
+    honor_timestamps: true
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets:
+        - calorie-bot.railway.internal:8080
+        labels:
+          app: calorie-bot
   # - job_name: 'example_api'
   #   scheme: http
   #   static_configs:
